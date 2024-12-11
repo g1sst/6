@@ -1,0 +1,60 @@
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .gallery-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slider {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+    .slide {
+      flex: 0 0 33.33%; /* 3 изображения на экране (для десктопа) */
+      max-width: 33.33%;
+    }
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #333;
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .arrow.left {
+      left: 10px;
+    }
+    .arrow.right {
+      right: 10px;
+    }
+    .pager {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .pager span {
+      margin: 0 5px;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 50%;
+      background: #eee;
+    }
+    .pager .active {
+      background: #333;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      .slide {
+        flex: 0 0 100%; /* 1 изображение на экране (для смартфонов) */
+        max-width: 100%;
+      }
+    }
